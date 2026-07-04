@@ -971,7 +971,7 @@
 
         function fetchUserEnrollments(userId) {
             try {
-                fetch(`https://edulearn-backend-opjz.onrender.com/api/batches/enrolled/${userId}`)
+                fetch(`https://edulearning-backend.onrender.com/api/batches/enrolled/${userId}`)
                 .then(res => res.json())
                 .then(data => {
                     if (data && data.enrolledBatches) {
@@ -1094,7 +1094,7 @@
             }
 
             // Call backend API
-            fetch('https://edulearn-backend-opjz.onrender.com/api/auth/register', {
+            fetch('https://edulearning-backend.onrender.com/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -1344,7 +1344,7 @@
             alert(`Successfully enrolled in "${courseName}"!`);
 
             // Try to sync enroll with backend (non-blocking)
-            fetch('https://edulearn-backend-opjz.onrender.com/api/batches/enroll', {
+            fetch('https://edulearning-backend.onrender.com/api/batches/enroll', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1384,7 +1384,7 @@
             alert(`Successfully unenrolled from "${courseName}"!`);
 
             // Try to sync unenroll with backend (non-blocking)
-            fetch('https://edulearn-backend-opjz.onrender.com/api/batches/unenroll', {
+            fetch('https://edulearning-backend.onrender.com/api/batches/unenroll', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
